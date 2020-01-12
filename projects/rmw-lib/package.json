@@ -1,0 +1,11 @@
+{
+  "name": "rmw-lib",
+  "version": "0.0.1",
+  "dependencies": {
+    "css-element-queries": "^1.2.3"
+  },
+  "peerDependencies": {
+    "@angular/common": "^8.2.14",
+    "@angular/core": "^8.2.14"
+  }
+}

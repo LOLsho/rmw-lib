@@ -1,0 +1,10 @@
+<div
+  class="popup"
+  [class.hidden]="!isOpened"
+  (click)="closePopup()"
+  #popup
+>
+  <div #popupContainer class="popup__container" (click)="$event.stopPropagation()">
+    <div #popupEntry></div>
+  </div>
+</div>

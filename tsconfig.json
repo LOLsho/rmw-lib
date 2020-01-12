@@ -17,7 +17,21 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "rmw-lib": [
+        "dist/rmw-lib"
+      ],
+      "rmw-lib/*": [
+        "dist/rmw-lib/*"
+      ],
+      "@lib/*": [
+        "projects/rmw-lib/src/lib/*"
+      ],
+      "@showcase/*": [
+        "projects/rmw-lib-showcase/src/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

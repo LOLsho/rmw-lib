@@ -1,0 +1,35 @@
+.showcase {
+  display: flex;
+
+  &__list {
+    align-self: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 12px;
+    background-color: aquamarine;
+    transition: background-color 0.2s ease;
+    box-shadow: inset 0 0 10px;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: darken(aquamarine, 20%);
+    }
+  }
+
+  &__content {
+    padding: 20px;
+  }
+}
+
+
+

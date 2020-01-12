@@ -1,0 +1,181 @@
+.nav {
+	text-align: center;
+	
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		background: #ddd;
+		border-radius: 5px;
+	}
+	
+	&__item {
+		float: left;
+		width: 150px;
+		height: 65px;
+		line-height: 65px;
+		position: relative;
+		text-transform: uppercase;
+		font-size: 14px;
+		color: rgba(0,0,0,0.7);
+		cursor: pointer;
+		
+		&:hover {
+			background: #d5d5d5;
+			border-radius: 5px;
+		}
+		
+		&:hover > .drop-menu li {
+			display: block;
+		}
+	}
+}
+
+.drop-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	perspective: 1000px;
+	
+	li {
+		background: #666;
+		color: rgba(255, 255, 255, 0.7);
+		display: none;
+		
+		&:hover {
+			background: #606060;
+		}
+		
+		&:last-child {
+			border-radius: 0 0 5px 5px;
+		}
+	}
+}
+
+
+
+// MENU 1 ----------------------
+.nav__item:hover > .drop-menu.menu-1 li {
+	opacity: 0;
+	
+	@iterations: 0;
+	.loop (@i) when (@i <= 6) {
+		&:nth-child(@{i}) {
+			animation-name: menu1;
+			animation-duration: calc(~"300ms * @{i}");
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: forwards;
+		}
+		.loop(@i + 1);
+	}
+	
+	.loop (@iterations);
+}
+
+@keyframes menu1 {
+	0% {
+		opacity: 0;
+		transform: rotateY(-90deg) translateY(30px);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+// MENU 2 ----------------------
+.nav__item:hover > .drop-menu.menu-2 li {
+	opacity: 0;
+	transform-origin: top center;
+	
+	@iterations: 0;
+	.loop (@i) when (@i <= 6) {
+		&:nth-child(@{i}) {
+			animation-name: menu2;
+			animation-duration: 300ms;
+			animation-delay: calc(~"100ms * @{i}");;
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: forwards;
+		}
+		.loop(@i + 1);
+	}
+	
+	.loop (@iterations);
+}
+
+@keyframes menu2 {
+	0% {
+		opacity: 0;
+		transform: rotateX(-90deg)
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+// MENU 3 ----------------------
+.nav__item:hover > .drop-menu.menu-3 li {
+	opacity: 0;
+	
+	@iterations: 0;
+	.loop (@i) when (@i <= 6) {
+		&:nth-child(@{i}) {
+			animation-name: menu3;
+			animation-duration: 300ms;
+			animation-delay: calc(~"150ms * @{i}");;
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: forwards;
+		}
+		.loop(@i + 1);
+	}
+	
+	.loop (@iterations);
+}
+
+@keyframes menu3 {
+	0% {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+	80% {
+		transform: scale(1.05);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+// MENU 4 ----------------------
+.nav__item:hover > .drop-menu.menu-4 li {
+	opacity: 0;
+	transform-origin: top right;
+	
+	@iterations: 0;
+	.loop (@i) when (@i <= 6) {
+		&:nth-child(@{i}) {
+			animation-name: menu4;
+			animation-duration: 300ms;
+			animation-delay: calc(~"150ms * @{i}");;
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: forwards;
+		}
+		.loop(@i + 1);
+	}
+	
+	.loop (@iterations);
+}
+
+@keyframes menu4 {
+	0% {
+		opacity: 0;
+		transform: rotate(-30deg) translateX(30px);
+	}
+	100% {
+		opacity: 1;
+	}
+}

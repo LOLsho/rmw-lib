@@ -1,0 +1,19 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "indent": false,
+    "no-trailing-whitespace": false,
+    "directive-selector": [
+      true,
+      "attribute",
+      "rmw",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "rmw",
+      "kebab-case"
+    ]
+  }
+}

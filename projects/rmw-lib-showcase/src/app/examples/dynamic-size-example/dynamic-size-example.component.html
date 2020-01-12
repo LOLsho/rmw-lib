@@ -1,0 +1,24 @@
+<button (click)="elements.push('')">Add block</button>
+<button (click)="elements.pop()">Remove block</button>
+
+<rmw-dynamic-size>
+    <div class="content" style="background-color: rosybrown; display: inline-flex">
+        Content
+        <div *ngFor="let elem of elements; let i = index">
+            <div class="box">
+                {{ i }}
+            </div>
+        </div>
+    </div>
+</rmw-dynamic-size>
+
+<rmw-dynamic-size>
+    <div class="content" style="background-color: rosybrown;">
+        Content
+        <div *ngFor="let elem of elements; let i = index">
+            <div class="box">
+                {{ i }}
+            </div>
+        </div>
+    </div>
+</rmw-dynamic-size>
