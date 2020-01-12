@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Test2PopupComponent } from './test2.popup.component';
-import { PopupService } from '@lib/components/popup/popup.service';
+import { PopupService } from '../../../../../../rmw-lib/src/lib/components/popup/popup.service';
 
 @Component({
     template: `

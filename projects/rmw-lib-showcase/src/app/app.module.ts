@@ -9,7 +9,7 @@ import { DynamicSizeExampleComponent } from './examples/dynamic-size-example/dyn
 import { ScrollExampleComponent } from './examples/scroll-example/scroll-example.component';
 import { CssAnimationsExampleComponent } from './examples/css-animations/css-animations-example.component';
 import { AnimationMenuComponent } from './examples/css-animations/menu/animation-menu.component';
-import { RmwLibModule } from '@lib/rmw-lib.module';
+import { RmwLibModule } from '../../../rmw-lib/src/lib/rmw-lib.module';
 
 
 @NgModule({

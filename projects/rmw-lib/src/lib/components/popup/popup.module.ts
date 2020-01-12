@@ -6,6 +6,6 @@ import { PopupService } from './popup.service';
     declarations: [PopupComponent],
     exports: [PopupComponent],
     imports: [],
-    providers: [PopupService]
+    providers: [PopupService],
 })
 export class PopupModule {}

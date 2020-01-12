@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { DelayedIfDirective } from '@lib/directives/delayed-if/delayed-if.directive';
+import { DelayedIfDirective } from './delayed-if.directive';
 
 @NgModule({
 	declarations: [DelayedIfDirective],

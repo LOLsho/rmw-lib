@@ -5,10 +5,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "deploy": "npm run build:lib && npm run publish",
     "build": "npm run build:app",
     "build:both": "npm run build:lib && npm run build:app",
-    "build:lib": "ng build rmw-lib --prod",
+    "build:lib": "ng build rmw-lib",
     "build:app": "ng build rmw-lib --prod",
+    "publish": "cd dist/rmw-lib && npm publish",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
